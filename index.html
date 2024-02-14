@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Valentine's Day Website</title>
+  <style>
+    body {
+      background-color: #f7d9e3;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+      color: #e6005c;
+      margin-top: 50px;
+    }
+    
+    p {
+      color: #333;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    
+    .heart {
+      color: #e6005c;
+      font-size: 100px;
+      margin-top: 50px;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #e6005c;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+    }
+    
+    .big-heart {
+      color: #e6005c;
+      font-size: 200px;
+      margin-top: 50px;
+    }
+    
+    .thank-you {
+      color: #e6005c;
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Will you be my Valentine, Suna?</h1>
+  <p>Spread the love and celebrate this special day with your loved ones.</p>
+  <p>Here's a heart for you:</p>
+  <div class="heart">&hearts;</div>
+  
+  <div>
+    <button class="button" onclick="yesClicked()">Yes</button>
+    <button class="button" onclick="noClicked()">No</button>
+  </div>
+  
+  <div id="bigHeartContainer" style="display: none;">
+    <div class="big-heart">&hearts;</div>
+    <div class="thank-you">THANK YOU BAE 😘 😘</div>
+  </div>
+
+  <script>
+    function yesClicked() {
+      document.getElementById("bigHeartContainer").style.display = "block";
+    }
+
+    function noClicked() {
+      var text = document.createElement("p");
+      text.innerHTML = "Please reconsider!";
+      document.body.appendChild(text);
+    }
+  </script>
+</body>
+</html>
